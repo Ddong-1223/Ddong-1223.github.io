@@ -43,11 +43,12 @@
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
       
-<div class="overlay" style="background: #4d4d4d"></div>
+<!-- <div class="overlay" style="background: #4d4d4d"></div> -->
+<div class="overlay" ></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="https://bucket-photos.oss-cn-beijing.aliyuncs.com/img/72392935.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/"></a></h1>
@@ -81,13 +82,7 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-		        
-					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-		        
-					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+					<a class="github" target="_blank" href="https://github.com/Ddong-1223" title="github"><i class="icon-github"></i></a>
 		        
 			</div>
 		</nav>
@@ -105,7 +100,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="https://bucket-photos.oss-cn-beijing.aliyuncs.com/img/72392935.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author"></h1>
@@ -122,13 +117,7 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-			        
-						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+						<a class="github" target="_blank" href="https://github.com/Ddong-1223" title="github"><i class="icon-github"></i></a>
 			        
 				</div>
 			</nav>
@@ -203,6 +192,16 @@
                   <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
                   <div class="reward-box">
                     
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://bucket-photos.oss-cn-beijing.aliyuncs.com/img/1627265235.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="https://bucket-photos.oss-cn-beijing.aliyuncs.com/img/mm_facetoface_collect_qrcode_1627265249723.png">
+                      <span class="reward-type">微信</span>
+                    </div>
                     
                   </div>
                 </span>
@@ -311,18 +310,46 @@
           </div>
         </div>
       </div>
-      <footer id="footer">
-  <div class="outer">
-    <div id="footer-info">
-    	<div class="footer-left">
-    		&copy; 2021 hi
-    	</div>
-      	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
-      	</div>
-    </div>
-  </div>
-</footer>
+      
+<span id="sitetime"></span>
+<script language=javascript>
+        function siteTime(){
+                window.setTimeout("siteTime()", 1000);
+                var seconds = 1000;
+                var minutes = seconds * 60;
+                var hours = minutes * 60;
+                var days = hours * 24;
+                var years = days * 365;
+                var today = new Date();
+                var todayYear = today.getFullYear();
+                var todayMonth = today.getMonth()+1;
+                var todayDate = today.getDate();
+                var todayHour = today.getHours();
+                var todayMinute = today.getMinutes();
+                var todaySecond = today.getSeconds();
+                /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+                year - 作为date对象的年份，为4位年份值
+                month - 0-11之间的整数，做为date对象的月份
+                day - 1-31之间的整数，做为date对象的天数
+                hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+                minutes - 0-59之间的整数，做为date对象的分钟数
+                seconds - 0-59之间的整数，做为date对象的秒数
+                microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+                var t1 = Date.UTC(2021,07,23,12,30,13); //建站时间
+                var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+                var diff = t2-t1;
+                var diffYears = Math.floor(diff/years);
+                var diffDays = Math.floor((diff/days)-diffYears*365);
+                var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+                var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+                var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+                document.getElementById("sitetime").innerHTML=" 已运行"+/*diffYears+" 年 "+*/diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+        }/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
+        siteTime();
+</script>
+
+
+
     </div>
     <script>
 	var yiliaConfig = {
@@ -447,26 +474,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           
             <li class="search-li">
               <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
             </li>
           
         </ul>
