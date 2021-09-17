@@ -15,11 +15,19 @@
 <meta property="og:site_name" content="呼呼哈哈">
 <meta property="og:description" content="无线电波传播特性电波传播方式1、 直射波（视距传播） 2、 地面反射波 3、 地表面波">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://bucket-photos.oss-cn-beijing.aliyuncs.com/img/wx.png">
+<meta property="og:image" content="https://bucket-photos.oss-cn-beijing.aliyuncs.com/img/wx2.png">
+<meta property="og:image" content="https://bucket-photos.oss-cn-beijing.aliyuncs.com/img/wx3.png">
+<meta property="og:image" content="https://bucket-photos.oss-cn-beijing.aliyuncs.com/img/wx4.png">
+<meta property="og:image" content="https://bucket-photos.oss-cn-beijing.aliyuncs.com/img/wx5.png">
+<meta property="og:image" content="https://bucket-photos.oss-cn-beijing.aliyuncs.com/img/wx5.png">
+<meta property="og:image" content="https://bucket-photos.oss-cn-beijing.aliyuncs.com/img/wx7.png">
 <meta property="article:published_time" content="2021-09-15T12:45:03.219Z">
-<meta property="article:modified_time" content="2021-09-15T13:41:35.003Z">
+<meta property="article:modified_time" content="2021-09-17T13:33:43.010Z">
 <meta property="article:author" content="D.">
 <meta property="article:tag" content="无线-移动通信传播特性">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://bucket-photos.oss-cn-beijing.aliyuncs.com/img/wx.png">
   
     <link rel="alternative" href="/atom.xml" title="呼呼哈哈" type="application/atom+xml">
   
@@ -215,7 +223,43 @@
 <p>或</p>
 <p><span style="color:yellow;">$L_{fs}(dB) = 32.44 + 20lgd(km) + 20lgf(MHz)$</span></p>
 <h3 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h3><p>电波传播中遇到两种不同介质的光滑界面时，若界面尺寸比电波波长大的多，就会产生镜面反射</p>
-<h4 id="平滑表面的反射"><a href="#平滑表面的反射" class="headerlink" title="平滑表面的反射"></a>平滑表面的反射</h4>
+<h4 id="平滑表面的反射"><a href="#平滑表面的反射" class="headerlink" title="平滑表面的反射"></a>平滑表面的反射</h4><p><img src="https://bucket-photos.oss-cn-beijing.aliyuncs.com/img/wx.png" alt=""></p>
+<h4 id="两径传播"><a href="#两径传播" class="headerlink" title="两径传播"></a>两径传播</h4><p><img src="https://bucket-photos.oss-cn-beijing.aliyuncs.com/img/wx2.png" alt=""></p>
+<p>$\Delta d =a + b - c= ((d_1 + d_2)^2 + (h_t + h_r)^2)^\frac{1}{2} - ((d_1 + d_2)^2 + (h_t - h_r)^2)^\frac{1}{2}$</p>
+<p>$=d[(1 + (\frac{h_t + h_r}{d})^2)^\frac{1}{2} - (1 + (\frac{h_t - h_r}{d})^2)^\frac{1}{2}]\qquad(d = d_1 + d_2)$</p>
+<p>由于$h_t + h_r &lt;&lt; d$</p>
+<p>$\Delta d = \frac{2 h_t h_r}{d}$</p>
+<p>由路径差$\Delta d$引起的附加相移：</p>
+<p>$\Delta \phi = \frac{2 \pi}{\lambda} \Delta d$<br>($\frac{2 \pi}{\lambda}$称为传播相移常数)</p>
+<p>故接收场强</p>
+<p>$E = E_0(1 + Re^{-j\Delta\phi}) = E_0(1 + |R|e^{-j(\phi + \Delta \phi)})$</p>
+<h5 id="结论"><a href="#结论" class="headerlink" title="结论"></a><span style="color:yellow;">结论</span></h5><p>直射波于地面反射波的合成场强将随反射系数以及路径差的变化而变化，有时会<span style="color:yellow;">同相相加</span>，有时会<span style="color:yellow;">反相抵消</span>，这就造成了合成波的衰落现象。</p>
+<p>$|R|$越接近1，衰落越严重</p>
+<h3 id="折射"><a href="#折射" class="headerlink" title="折射"></a>折射</h3><h4 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h4><p>当电波从一种介质进入到另一种介质时，传播方向会发生变化</p>
+<p>不考虑传导电流和介质磁化的情况下：</p>
+<p>$n = \epsilon_r ^ \frac{1}{2}\qquad(n为介质折射率，\epsilon_r为相对介电常数)$</p>
+<h4 id="大气折射"><a href="#大气折射" class="headerlink" title="大气折射"></a>大气折射</h4><p>由于不同高度上电波传播速度不同，从而使电波射束发生弯曲，弯曲的方向和程度取决于大气折射率的垂直梯度$d_n/d_h$。</p>
+<p>这种由大气折射率引起电波传播方向发生弯曲的现象，称为大气对电波的折射</p>
+<p>用<span style="color:yellow;">地球等效半径</span>表征</p>
+<p>（认为电波沿直线传播，而地球实际半径$R_0$变为$R_e$）</p>
+<p>$k = \frac{R_e}{R_0} = \frac{1}{1 + R_0\frac{dn}{dh}}$(k为地球等效半径系数)</p>
+<h4 id="视线传播极限距离"><a href="#视线传播极限距离" class="headerlink" title="视线传播极限距离"></a>视线传播极限距离</h4><p><img src="https://bucket-photos.oss-cn-beijing.aliyuncs.com/img/wx3.png" alt=""></p>
+<p>图中$h_1、h_2$为天线高度</p>
+<p>$d_1 \approx (2 R_e h_t)^\frac{1}{2}\qquad d_2 \approx (2 R_e h_r)^\frac{1}{2}$</p>
+<p>$d = d_1 + d_2 \approx (2 R_e)^\frac{1}{2} (h_t ^ \frac{1}{2} + h_r ^ \frac{1}{2})$</p>
+<p>$\approx 4.12(h_t ^ \frac{1}{2} + h_r ^ \frac{1}{2})$</p>
+<h3 id="绕射"><a href="#绕射" class="headerlink" title="绕射"></a>绕射</h3><p>实际移动过程中，发射机与接收机之间的传播路径存在各种障碍物，无线电波被尖利的边缘阻挡时会发生绕射，其所引起的电波传播损耗称为绕射损耗</p>
+<h4 id="菲涅尔区概念"><a href="#菲涅尔区概念" class="headerlink" title="菲涅尔区概念"></a>菲涅尔区概念</h4><p>惠更斯=菲涅尔原理<br><img src="https://bucket-photos.oss-cn-beijing.aliyuncs.com/img/wx4.png" alt=""></p>
+<p>菲涅尔区概念<br><img src="https://bucket-photos.oss-cn-beijing.aliyuncs.com/img/wx5.png" alt=""></p>
+<p>$x_n = (\frac{n \lambda d_1 d_2}{d_1 + d_2})^\frac{1}{2}$</p>
+<h4 id="刃形绕射模型"><a href="#刃形绕射模型" class="headerlink" title="刃形绕射模型"></a>刃形绕射模型</h4><p>障碍物为单个物体，且障碍物的宽度与高度相比很小，称为刃形障碍物</p>
+<p>正、负余隙</p>
+<p><img src="https://bucket-photos.oss-cn-beijing.aliyuncs.com/img/wx5.png" alt=""></p>
+<p>绕射损耗与余隙的关系</p>
+<p><img src="https://bucket-photos.oss-cn-beijing.aliyuncs.com/img/wx7.png" alt=""></p>
+<p>当菲涅尔余隙$x &gt; 0.5 x_1$时，<span style="color:yellow;">附加损耗</span>约为$0dB$</p>
+<h3 id="散射"><a href="#散射" class="headerlink" title="散射"></a>散射</h3><hr>
+<h2 id="移动信道的特征"><a href="#移动信道的特征" class="headerlink" title="移动信道的特征"></a>移动信道的特征</h2>
       
 
     </div>

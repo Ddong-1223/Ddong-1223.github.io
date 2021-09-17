@@ -17,7 +17,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://bucket-photos.oss-cn-beijing.aliyuncs.com/img/qrs.jpg">
 <meta property="article:published_time" content="2021-09-15T02:59:33.731Z">
-<meta property="article:modified_time" content="2021-09-15T04:46:45.481Z">
+<meta property="article:modified_time" content="2021-09-17T12:56:31.004Z">
 <meta property="article:author" content="D.">
 <meta property="article:tag" content="ARM">
 <meta name="twitter:card" content="summary">
@@ -197,6 +197,7 @@
 <p>J：含有Java加速器Jazelle</p>
 <p>F: 向量浮点运算单元</p>
 <p>S： 表示处理器内核是以源代码形式提供</p>
+<hr>
 <h2 id="ARM处理器技术"><a href="#ARM处理器技术" class="headerlink" title="ARM处理器技术"></a>ARM处理器技术</h2><p>ARM处理器是内嵌32位精简指令集RISC的CPU</p>
 <p>RISC： 精简指令集计算机</p>
 <p>CISC： 复杂指令集计算机</p>
@@ -232,7 +233,18 @@
 <p>哈佛结构的计算机由CPU、程序存储器和数据存储器组成，程序存储器和数据存储器采用不同的总线，从而提供了较大的存储器带宽，使数据的移动和交换更加方便，尤其提供了较高的数字信号处理性能。</p>
 <h4 id="对比冯·诺伊曼结构（ARM7采用）"><a href="#对比冯·诺伊曼结构（ARM7采用）" class="headerlink" title="对比冯·诺伊曼结构（ARM7采用）"></a>对比冯·诺伊曼结构（ARM7采用）</h4><p>也称普林斯顿结构，是一种将程序指令存储器和数据存储器合并在一起的存储器结构。</p>
 <p>程序指令存储结构和数据存储地址指向同一个存储器的不同物理位置。</p>
-
+<h3 id="AMBA总线技术"><a href="#AMBA总线技术" class="headerlink" title="AMBA总线技术"></a>AMBA总线技术</h3><p>AMBA总线规范是ARM公司设计的一种用于高性能嵌入式系统的总线标准</p>
+<p>AMBA总线是一个多总线系统，AMBA2.0定义了三种可以组合使用的不同类型的不同类型的总线：AHB、ASB、APB。（该阶段引入的高性能总线AHB是现阶段AMBA实现的主要形式）</p>
+<h4 id="1、AHB总线"><a href="#1、AHB总线" class="headerlink" title="1、AHB总线"></a>1、<span style="color:yellow;">AHB总线</span></h4><p>适用于连接高性能和高时钟频率的系统模块</p>
+<p>（主要连接高性能和高吞吐量的部件）</p>
+<h4 id="2、ASB总线"><a href="#2、ASB总线" class="headerlink" title="2、ASB总线"></a>2、<span style="color:yellow;">ASB总线</span></h4><p>适用于连接高性能的系统模块</p>
+<h4 id="3、APB总线"><a href="#3、APB总线" class="headerlink" title="3、APB总线"></a>3、<span style="color:yellow;">APB总线</span></h4><p>适用于连接低功耗的外部设备模块</p>
+<hr>
+<h2 id="ARM7处理器结构"><a href="#ARM7处理器结构" class="headerlink" title="ARM7处理器结构"></a>ARM7处理器结构</h2><p>由<span style="color:yellow;">ARM7内核</span>、<span style="color:yellow;">EmbeddedICE-RT</span>、<span style="color:yellow;">TAP控制器</span>、<span style="color:yellow;">扫描链</span>组成。</p>
+<h3 id="ARM7内核"><a href="#ARM7内核" class="headerlink" title="ARM7内核"></a>ARM7内核</h3><p>ARM7内核由<span style="color:yellow;">控制器</span>、<span style="color:yellow;">运算器</span>、<span style="color:yellow;">寄存器</span>组成的CPU电路。</p>
+<h3 id="ARM7TDMI处理器模块"><a href="#ARM7TDMI处理器模块" class="headerlink" title="ARM7TDMI处理器模块"></a>ARM7TDMI处理器模块</h3><p>ARM7TDMI处理器模块含有时钟、中断、总线控制、仲裁、存储器等基本接口，还增加了功能强大的协处理器、调试、同步扫描调试等接口</p>
+<hr>
+<h2 id="ARM7TDMI工作状态及模式"><a href="#ARM7TDMI工作状态及模式" class="headerlink" title="ARM7TDMI工作状态及模式"></a>ARM7TDMI工作状态及模式</h2>
       
 
     </div>
