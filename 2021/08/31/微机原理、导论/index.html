@@ -17,7 +17,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://bucket-photos.oss-cn-beijing.aliyuncs.com/img/wj1.png">
 <meta property="article:published_time" content="2021-08-31T12:55:47.846Z">
-<meta property="article:modified_time" content="2021-08-31T13:56:58.263Z">
+<meta property="article:modified_time" content="2021-09-18T08:58:38.273Z">
 <meta property="article:author" content="D.">
 <meta property="article:tag" content="微机原理-导论">
 <meta name="twitter:card" content="summary">
@@ -75,7 +75,7 @@
 			</ul>
 		</nav>
 		<nav>
-			总文章数 13
+			总文章数 14
 		</nav>
 		<nav class="header-smart-menu">
     		
@@ -197,6 +197,22 @@
 <p>1、<span style="color:yellow;">地址总线</span>（单向传输）：由CPU发出，在对存储器或I/O端口进行访问时，传送由CPU提供的要访问存储单元或I/O端口的地址信息，以便选中要访问的存储单元或I/O端口。</p>
 <p>2、<span style="color:yellow;">数据总线</span>（双向传输）：从存储器取指令或读写操作数，对I/O端口进行读写操作时，指令码或数据信息通过数据总线送往CPU或由CPU送出。</p>
 <p>3、<span style="color:yellow;">控制总线</span>（双向传输、对确定的一根线为单向传输）：各种控制或状态信息通过控制总线由CPU送往有关部件，或者从有关部件送往CPU。</p>
+<h3 id="内部寄存器"><a href="#内部寄存器" class="headerlink" title="内部寄存器"></a>内部寄存器</h3><p>CPU一般至少有以下几种：</p>
+<h4 id="1、程序计数器PC"><a href="#1、程序计数器PC" class="headerlink" title="1、程序计数器PC"></a>1、<span style="color:yellow;">程序计数器PC</span></h4><p>也可称为指令指针（IP），用来存储下一条要执行指令所在存储单元的地址</p>
+<h4 id="2、地址寄存器AR"><a href="#2、地址寄存器AR" class="headerlink" title="2、地址寄存器AR"></a>2、<span style="color:yellow;">地址寄存器AR</span></h4><p>存放正要取出的指令的地址或操作数的地址</p>
+<h4 id="3、数据缓存寄存器DR"><a href="#3、数据缓存寄存器DR" class="headerlink" title="3、数据缓存寄存器DR"></a>3、<span style="color:yellow;">数据缓存寄存器DR</span></h4><p>用来暂时存放指令或数据</p>
+<h4 id="4、累加器A"><a href="#4、累加器A" class="headerlink" title="4、累加器A"></a>4、<span style="color:yellow;">累加器A</span></h4><p>用来暂时存放ALU运算结果</p>
+<h4 id="5、标志寄存器FLAGS"><a href="#5、标志寄存器FLAGS" class="headerlink" title="5、标志寄存器FLAGS"></a>5、<span style="color:yellow;">标志寄存器FLAGS</span></h4><p>也称程序状态字，用来存放执行算术运算指令、逻辑运算指令或测试指令后建立的各种状态码内容以及对CPU操作进行控制的控制信息</p>
+<h4 id="6、寄存器阵列RA"><a href="#6、寄存器阵列RA" class="headerlink" title="6、寄存器阵列RA"></a>6、<span style="color:yellow;">寄存器阵列RA</span></h4><p>相当于微处理器内部的RAM</p>
+<h3 id="存储器"><a href="#存储器" class="headerlink" title="存储器"></a>存储器</h3><p>指内存储器，如主存或内存</p>
+<p>时微型计算机的存储和记忆装置，用来存放指令、原始数据、中间结果和最终结果。</p>
+<h4 id="几个基本概念"><a href="#几个基本概念" class="headerlink" title="几个基本概念"></a>几个基本概念</h4><p>位（Bit）：二进制信息的最小单位（0或1）</p>
+<p>字节（Byte）：由8位二进制数组成，可以存放在一个存储单元中。字节是字的基本组成单位</p>
+<p>字（Word）：计算机中作为一个整体来处理和运算的一组二进制数，是字节的整数倍。（现将一个字定义为16位，一个双字定义为32位）</p>
+<p>内存容量：内存中存储单元的总数。通常以字节为单位，$1024(2^{10})$字节记作1KB</p>
+<p>内存单元地址：为识别不同的单元，为每个单元赋予的编号</p>
+<h3 id="内存"><a href="#内存" class="headerlink" title="内存"></a>内存</h3><h4 id="1、RAM"><a href="#1、RAM" class="headerlink" title="1、RAM"></a>1、RAM</h4><p>随机读写存储器</p>
+<h4 id="2、RAM"><a href="#2、RAM" class="headerlink" title="2、RAM"></a>2、RAM</h4><p>只读存储器</p>
 
       
 
@@ -517,6 +533,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">无线-移动通信传播特性</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">微机原理-数制与编码</a>
               </li>
             
             <div class="clearfix"></div>
