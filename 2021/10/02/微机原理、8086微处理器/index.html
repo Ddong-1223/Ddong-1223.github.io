@@ -6,17 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2021 | 呼呼哈哈</title>
+  <title>8086微处理器 | 呼呼哈哈</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="行百里者半九十">
-<meta property="og:type" content="website">
-<meta property="og:title" content="呼呼哈哈">
-<meta property="og:url" content="http://example.com/archives/2021/page/2/index.html">
+  <meta name="description" content="几个基本概念1、集成度： CPU芯片中所包含的晶体管数 2、主频： 芯片所使用的主时钟频率，直接影响计算机的运算速度 3、数据总线： 计算机中各个部件间进行数据传送时的公共通道 内数据总线宽度： CPU芯片内部数据传送的宽度（位数） 外数据总线宽度： CPU与外部交换数据时的数据宽度">
+<meta property="og:type" content="article">
+<meta property="og:title" content="8086微处理器">
+<meta property="og:url" content="http://example.com/2021/10/02/%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E3%80%818086%E5%BE%AE%E5%A4%84%E7%90%86%E5%99%A8/index.html">
 <meta property="og:site_name" content="呼呼哈哈">
-<meta property="og:description" content="行百里者半九十">
+<meta property="og:description" content="几个基本概念1、集成度： CPU芯片中所包含的晶体管数 2、主频： 芯片所使用的主时钟频率，直接影响计算机的运算速度 3、数据总线： 计算机中各个部件间进行数据传送时的公共通道 内数据总线宽度： CPU芯片内部数据传送的宽度（位数） 外数据总线宽度： CPU与外部交换数据时的数据宽度">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://bucket-photos.oss-cn-beijing.aliyuncs.com/img/wj2.png">
+<meta property="og:image" content="https://bucket-photos.oss-cn-beijing.aliyuncs.com/img/wj3.png">
+<meta property="article:published_time" content="2021-10-02T05:46:30.638Z">
+<meta property="article:modified_time" content="2021-10-03T09:06:25.730Z">
 <meta property="article:author" content="D.">
+<meta property="article:tag" content="微机原理-8086微处理器">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://bucket-photos.oss-cn-beijing.aliyuncs.com/img/wj2.png">
   
     <link rel="alternative" href="/atom.xml" title="呼呼哈哈" type="application/atom+xml">
   
@@ -155,282 +161,232 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-微机原理、8086微处理器" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      8086微处理器
+    </h1>
+  
+
+        
+        <a href="/2021/10/02/%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E3%80%818086%E5%BE%AE%E5%A4%84%E7%90%86%E5%99%A8/" class="archive-article-date">
+  	<time datetime="2021-10-02T05:46:30.638Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-10-02</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+
+        
+
+        <h2 id="几个基本概念"><a href="#几个基本概念" class="headerlink" title="几个基本概念"></a>几个基本概念</h2><p>1、集成度： CPU芯片中所包含的晶体管数</p>
+<p>2、主频： 芯片所使用的主时钟频率，直接影响计算机的运算速度</p>
+<p>3、数据总线： 计算机中各个部件间进行数据传送时的公共通道</p>
+<p>内数据总线宽度： CPU芯片内部数据传送的宽度（位数）</p>
+<p>外数据总线宽度： CPU与外部交换数据时的数据宽度</p>
+<span id="more"></span> 
+<p>4、地址总线: 在对存储器或I/O端口进行访问时，传送由CPU提供的要访问的存储单元或I/O端口的<span style="color:yellow;">地址信息</span>的总线，其宽度决定了处理器能直接访问的<span style="color:yellow;">主存容量</span>大小。</p>
+<p>为满足微型计算机对存储器系统<span style="color:yellow;">高速度、大容量、低成本</span>的要求，目前其系统采用三级存储器组织结构，即Cache、主存、外存</p>
+<p>如图</p>
+<p><img src="https://bucket-photos.oss-cn-beijing.aliyuncs.com/img/wj2.png" alt=""></p>
+<p>5、主存： 当前正在执行的程序或要使用的数据必须从外存调入主存后才能被CPU读取并执行，主存容量通常为MB级</p>
+<p>6、外存： 当前没有使用的程序可存入外村，外存的容量通常很大，可达GB甚至TB级</p>
+<p>7、高速缓冲存储器Cache： 最大特点是存取速度快，但容量较小，通常为KB级，Cache的使用大大提高了CPU读取指令或数据的速度</p>
+<h2 id="8086微处理器"><a href="#8086微处理器" class="headerlink" title="8086微处理器"></a>8086微处理器</h2><p>8086有<span style="color:yellow;">16条数据总线</span>，可以处理8位或16位数据；有<span style="color:yellow;">20条地址总线</span>，可以直接寻址$2^{20}（1M）字节$的存储单元</p>
+<p>从功能上来看，8086CPU内部结构可分为</p>
+<p>1、总线接口单元（BIU）： 负责完成CPU与存储器或I/O设备之间的数据传送</p>
+<p>2、执行单元（EU）： 不与系统外部直接相连，只是负责执行指令</p>
+<h3 id="总线接口单元（BIU）"><a href="#总线接口单元（BIU）" class="headerlink" title="总线接口单元（BIU）"></a>总线接口单元（BIU）</h3><h4 id="BIU的任务"><a href="#BIU的任务" class="headerlink" title="BIU的任务"></a>BIU的任务</h4><p>1、读指令：指令队列出现空字节（8086中为2个空字节时），从内存取出后续指令</p>
+<p>（BIU取指令和EU的指行是并行关系，提高了CPU的执行速度）</p>
+<p>2、读操作数：EU需要从内存或外设端口读取操作数时，根据EU给出的地址从内存或外设端口读取数据供EU使用</p>
+<p>3、写操作数：EU的运算结果、数据或控制命令等由BIU送往指定的内存单元或外设端口</p>
+<h4 id="BIU的组成"><a href="#BIU的组成" class="headerlink" title="BIU的组成"></a>BIU的组成</h4><p>1、4个16位段寄存器：代码段寄存器CS、数据段寄存器DS、堆栈段寄存器SS、附加数据段寄存器ES</p>
+<p>2、1个16位的指令指针寄存器IP</p>
+<p>3、1个20位地址加法器</p>
+<p>4、6字节的指令队列缓冲器</p>
+<p>5、1个与EU通讯的内部寄存器以及总线控制电路</p>
+<p>代码段寄存器CS：存储程序当前使用的代码段的段地址。代码段用来存放程序的指令代码。下一条要读取指令在代码段的偏移地址由指令指针寄存器IP提供</p>
+<p>数据段寄存器DS：用来存放程序当前使用的数据段的段地址。数据段里包含有例如原始数据、中间结果以及最终结果</p>
+<p>堆栈段寄存器SS：用来存放程序当前所使用的堆栈段的段地址。堆栈是在存储器中开辟的一个特定区域</p>
+<p>附加数据寄存器ES：用来存放程序当前使用的附加数据段的段地址。附加数据段通常用于存放字符串操作时的目的字符串</p>
+<p>指令指针寄存器IP：用来存放下一条要读取的指令在代码段中的偏移地址。通常自动+1修正</p>
+<p>20位地址加法器： 8086CPU有20条地址总线，却只有16条数据总线，其对存储单元进行访问的20位地址就是由BIU中的20位地址加法器产生的</p>
+<p>指令队列缓冲器： 例如8086指令队列为6位，当指令队列出现2个空子节时，BIU则执行一次取指令周期，将下一条要执行的指令从内存单元读入指令队列。（先进先出的原则，指令队列的引入使得EU和BIU可并行工作）</p>
+<h4 id="存储单元地址表达"><a href="#存储单元地址表达" class="headerlink" title="存储单元地址表达"></a>存储单元地址表达</h4><p>1、逻辑地址： 表示为$\quad$段地址：段内偏移地址</p>
+<p>读指令时，段地址由代码段寄存器CS提供，偏移地址由指令指针寄存器IP提供；</p>
+<p>读取或存储操作数时，段地址由DS、ES或SS提供，段内偏移地址由指令给出。 </p>
+<p>2、物理地址： CPU与存储器进行数据交换时在地址总线上提供的20位地址信息</p>
+<p>段寄存器(为16位)内容左移四位后（相当于乘以$2^4 = 10H$）得到段基址</p>
+<p>$物理地址=段地址*10H+段内偏移地址$</p>
+<h3 id="执行单元（EU）"><a href="#执行单元（EU）" class="headerlink" title="执行单元（EU）"></a>执行单元（EU）</h3><p>EU执行的指令从BIU的指令队列缓冲器中直接得到</p>
+<h4 id="EU的组成"><a href="#EU的组成" class="headerlink" title="EU的组成"></a>EU的组成</h4><p>1、16位算术逻辑单元（ALU）：进行算术和逻辑运算</p>
+<p>2、16位标志寄存器（FLAGS）：存放CPU运算的状态和控制标志</p>
+<p>3、数据暂存寄存器：暂存参加运算的数据</p>
+<p>4、通用寄存器：包含4个位数据寄存器AX、BX、CX、DX和4个16位指针与变址寄存器SP、BP、SI、DI</p>
+<p>5、EU控制电路：控制、定时与状态逻辑电路</p>
+<p>接收从BIU中指令队列取来的指令，经过指令译码形成各种定时控制信号，对EU的各个部件实现特定的定时操作</p>
+<h5 id="通用寄存器"><a href="#通用寄存器" class="headerlink" title="通用寄存器"></a>通用寄存器</h5><p>数据寄存器</p>
+<p>累加器AX：用该寄存器存放运算结果可使指令简化，提高指令的执行速度。此外，所有的I/O指令都使用该寄存器与外设端口交换信息。</p>
+<p>基址寄存器BX：8086CPU中有两个基址寄存器BX和BP</p>
+<p>BX用来存放操作数在内存中数据段内的偏移地址</p>
+<p>BP用来存放操作数在堆栈段内的偏移地址</p>
+<p>计数器CX：设计循环程序时使用该寄存器存放循环次数，可使程序指令简化，有利于提高程序的运行速度。</p>
+<p>数据寄存器DX：在寄存器间接寻址的I/O指令中存放I/O端口地址；在做双字长乘除法运算时，DX与AX一起存放一个双字长操作数，其中DX存放高16位数。 </p>
+<p>地址寄存器</p>
+<p>堆栈指针寄存器SP：使用push或pop时，每次sp会+2或-2，保持指向栈顶</p>
+<p>基址寄存器BP：存放数据或存放操作数在堆栈段内的偏移地址</p>
+<p>遍址寄存器</p>
+<p>原变址寄存器SI：存放源串在数据段内的偏移地址</p>
+<p>目的遍址寄存器DI：存放目的串在附加数据段内的偏移地址</p>
+<h5 id="段寄存器"><a href="#段寄存器" class="headerlink" title="段寄存器"></a>段寄存器</h5><p>同于BIU的4个段寄存器</p>
+<p>段寄存器与提供段内偏移地址的寄存器之间的默认组合 </p>
+<p><img src="https://bucket-photos.oss-cn-beijing.aliyuncs.com/img/wj3.png" alt=""></p>
+<h5 id="控制寄存器"><a href="#控制寄存器" class="headerlink" title="控制寄存器"></a>控制寄存器</h5><p>指令指针寄存器IP</p>
+<p>标志寄存器FLAGS：16位的寄存器只用9位，6个状态标志位，3个控制标志位</p>
+<p>6个状态标志位：</p>
+<p>1、进位标志CF：进位为1</p>
+<p>2、奇偶标志位PF：当低8位中含有偶数个1时，PF为1</p>
+<p>3、辅助进位标志位AF：当执行一条加法或减法运算指令时，若结果的低字节的低4位向高4位有进位或借位，则AF为1</p>
+<p>4、零标志位ZF：当前运算结果为0，ZF为1</p>
+<p>5、符号标志位SF：运算结果最高位为1，SF=1</p>
+<p>6、溢出标志位OF：运算结果超出带符号数数值范围，即为溢出，OF为1</p>
+<p>3个控制标志位：</p>
+<p>1、跟踪（陷阱）标志位TF：为测试程序而设置，置为1时，CPU为单步工作方式</p>
+<p>2、中断允许标志位IF：用来控制可屏蔽中断的控制标志位。置为1时，允许CPU接收外部从INTR引脚发来的可屏蔽中断请求信号</p>
+<p>3、方向标志位DF：置为1时，串操作将按减地址方向进行，反之为增地址方向</p>
+
+      
+
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/08/30/%E7%8E%B0%E4%BB%A3%E9%80%9A%E4%BF%A1%E7%BD%91%E3%80%81%E7%BB%AA%E8%AE%BA/" class="archive-article-date">
-  	<time datetime="2021-08-30T09:56:19.781Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-08-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/08/30/%E7%8E%B0%E4%BB%A3%E9%80%9A%E4%BF%A1%E7%BD%91%E3%80%81%E7%BB%AA%E8%AE%BA/">第一章 绪论</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">现代通信网-绪论</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">微机原理-8086微处理器</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/现代通信网//" class="article-tag-list-link color1">现代通信网</a>
+        			<a href="/categories/微机原理//" class="article-tag-list-link color5">微机原理</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/10/02/%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E3%80%818086%E5%BE%AE%E5%A4%84%E7%90%86%E5%99%A8/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/08/30/%E9%AB%98%E9%A2%91%E3%80%81%E7%BB%AA%E8%AE%BA/" class="archive-article-date">
-  	<time datetime="2021-08-30T02:40:47.386Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-08-30</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2021/09/18/%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E3%80%81%E6%95%B0%E5%88%B6%E4%B8%8E%E7%BC%96%E7%A0%81/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">计算机中的数制与编码</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/08/30/%E9%AB%98%E9%A2%91%E3%80%81%E7%BB%AA%E8%AE%BA/">第一章 绪论</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">高频-绪论</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/高频//" class="article-tag-list-link color3">高频</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/08/26/tmux%E3%80%81vim/" class="archive-article-date">
-  	<time datetime="2021-08-26T05:50:00.376Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-08-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/08/26/tmux%E3%80%81vim/">tmux、vim</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">tmux</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vim</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/linux//" class="article-tag-list-link color1">linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/08/12/%E6%8E%92%E5%BA%8F%E3%80%81%E8%BF%9B%E4%BD%8D%E5%88%B6/" class="archive-article-date">
-  	<time datetime="2021-08-12T02:36:41.917Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-08-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/08/12/%E6%8E%92%E5%BA%8F%E3%80%81%E8%BF%9B%E4%BD%8D%E5%88%B6/">排序、进位制</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">排序</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">进位制</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/考研算法辅导课//" class="article-tag-list-link color3">考研算法辅导课</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/08/12/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E3%80%81%E7%9F%A9%E9%98%B5%E5%B1%95%E5%BC%80/" class="archive-article-date">
-  	<time datetime="2021-08-12T01:21:11.889Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-08-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/08/12/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E3%80%81%E7%9F%A9%E9%98%B5%E5%B1%95%E5%BC%80/">时间复杂度、矩阵展开</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">时间复杂度</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">矩阵展开</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/考研算法辅导课//" class="article-tag-list-link color3">考研算法辅导课</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2021/">&amp;laquo; Prev</a><a class="page-number" href="/archives/2021/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
+  
+
   
 
 
@@ -482,8 +438,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
